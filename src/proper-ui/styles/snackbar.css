@@ -1,0 +1,17 @@
+.snackbar {
+    position: fixed;
+    top: 0;
+    left: calc(calc(100% - 300px) / 2);
+
+    color: white;
+    background-color: rgb(41, 226, 217);
+    border: 2px solid lightseagreen;
+    width: 300px;
+    padding: 0.5em;
+    margin-top: -100%;
+    transition: all 0.3s;
+}
+
+.snackbar.active {
+    margin-top: 0;
+}

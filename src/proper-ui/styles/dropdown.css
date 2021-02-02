@@ -1,0 +1,40 @@
+.dropdown {
+    margin-bottom: 0.3em;
+}
+
+.dropdown > .trigger {
+    position: relative;
+    border-bottom: 1px solid lightseagreen;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+.dropdown > .trigger::after {
+    content: '>';
+    color: rgb(100, 100, 100);
+    font-family: monospace;
+    font-size: 1.3em;
+    font-weight: bold;
+    display: inline-block;
+    
+    position: absolute;
+    right: 5px;
+    transform: rotate(90deg);
+    transition: transform 0.2s linear;
+}
+
+.dropdown > .content {
+    display: none;
+    /* height: 0; */
+    /* overflow: hidden; */
+    /* transition: height 0.3s linear; */
+}
+
+.dropdown > .trigger.active::after {
+    transform: rotate(-90deg);
+}
+
+.dropdown > .content.active {
+    display: block;
+    /* height: auto; */
+}

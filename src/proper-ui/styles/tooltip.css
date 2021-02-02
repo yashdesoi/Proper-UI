@@ -1,0 +1,41 @@
+.tooltip {
+    display: inline-block;
+    color: lightseagreen;
+    position: relative;
+    cursor: help;
+}
+
+.tooltip > .tip {
+    position: absolute;
+
+    visibility: hidden;
+    background-color: lightseagreen;
+    color: white;
+    width: max-content;
+    max-width: 200px;
+    padding: 0.3em;
+    border-radius: 0.2em;
+    /* opacity: 0; */
+    transform: scale(0);
+    transition: transform 0.1s linear;
+}
+
+.tooltip > .tip::after {
+    content: '';
+    width: 0;
+    height: 0;
+
+    display: block;
+    border-top: 0.23em solid lightseagreen;
+    border-left: 0.23em solid transparent;
+    border-right: 0.23em solid transparent;
+    
+    position: absolute;
+    bottom: -0.23em;
+    left: calc(calc(100% - 0.23em) / 2);
+}
+
+.tooltip > .active {
+    visibility: visible;
+    transform: scale(1);
+}
