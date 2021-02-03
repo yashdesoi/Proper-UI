@@ -12,8 +12,19 @@ class Tooltip {
         tip.textContent = this.message;
         this.element.appendChild(tip);
 
-        tip.style.top = `-${tip.offsetHeight}px`;
-        tip.style.left = `${(this.element.offsetWidth - tip.offsetWidth) / 2}px`;
+        if (this.element.classList.contains('top')) {
+            tip.style.top = `-${tip.offsetHeight}px`;
+            tip.style.left = `${(this.element.offsetWidth - tip.offsetWidth) / 2}px`;
+        } else if (this.element.classList.contains('left')) {
+            tip.style.left = `-${tip.offsetWidth + 4}px`;
+            tip.style.top = `${(this.element.offsetHeight - tip.offsetHeight) / 2}px`;
+        } else if (this.element.classList.contains('right')) {
+            tip.style.right = `-${tip.offsetWidth + 4}px`;
+            tip.style.top = `${(this.element.offsetHeight - tip.offsetHeight) / 2}px`;
+        } else if (this.element.classList.contains('bottom')) {
+            tip.style.bottom = `-${tip.offsetHeight + 2}px`;
+            tip.style.left = `${(this.element.offsetWidth - tip.offsetWidth) / 2}px`;
+        }
 
         this.element.addEventListener('mouseenter', () => {
             tip.classList.add('active');

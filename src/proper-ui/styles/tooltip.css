@@ -20,7 +20,7 @@
     transition: transform 0.1s linear;
 }
 
-.tooltip > .tip::after {
+.tooltip.top > .tip::after {
     content: '';
     width: 0;
     height: 0;
@@ -32,6 +32,51 @@
     
     position: absolute;
     bottom: -0.23em;
+    left: calc(calc(100% - 0.23em) / 2);
+}
+
+.tooltip.left > .tip::after {
+    content: '';
+    width: 0;
+    height: 0;
+
+    display: block;
+    border-top: 0.23em solid transparent;
+    border-left: 0.23em solid lightseagreen;
+    border-bottom: 0.23em solid transparent;
+    
+    position: absolute;
+    right: -0.23em;
+    top: calc(calc(100% - 0.23em) / 2);
+}
+
+.tooltip.right > .tip::after {
+    content: '';
+    width: 0;
+    height: 0;
+
+    display: block;
+    border-top: 0.23em solid transparent;
+    border-right: 0.23em solid lightseagreen;
+    border-bottom: 0.23em solid transparent;
+    
+    position: absolute;
+    left: -0.23em;
+    top: calc(calc(100% - 0.23em) / 2);
+}
+
+.tooltip.bottom > .tip::after {
+    content: '';
+    width: 0;
+    height: 0;
+
+    display: block;
+    border-left: 0.23em solid transparent;
+    border-right: 0.23em solid transparent;
+    border-bottom: 0.23em solid lightseagreen;
+    
+    position: absolute;
+    top: -0.23em;
     left: calc(calc(100% - 0.23em) / 2);
 }
 
