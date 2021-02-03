@@ -6,9 +6,41 @@
     <title>Proper UI - Demo</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Lato', sans-serif;
+        }
+
+        a {
+            position: fixed;
+            top: -50px;
+            right: -50px;
+
+            display: block;
+            background-color: black;
+            color: white;
+            font-size: 30px;
+            width: 100px;
+            height: 100px;
+            transform: rotate(-45deg) scale(1);
+            transition: all 0.1s linear;
+        }
+
+        a:hover {
+            transform: rotate(-45deg) scale(1.1);
+            background-color: lightseagreen;
+        }
+
+        a > i {
+            position: absolute;
+            top: 35.5px;
+            left: 7px;
+            transform: rotate(45deg);
         }
 
         h1 {
@@ -45,10 +77,13 @@
 </head>
 <body>
     <h1>Proper UI</h1>
+    <a href="https://github.com/yashdesoi/Proper-UI" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
 
     <div>
         <h2>Tooltips</h2>
-        Lorem ipsum dolor sit <span class="tooltip bottom" data-message="I'm Tooltip lol">amet consectetur</span> adipisicing elit. Fugit optio nihil reiciendis asperiores aut nesciunt? Qui adipisci voluptatibus atque consequatur laboriosam nam quis iusto <span class="tooltip top" data-message="I'm a Tooltip :)">earum perferendis</span>. Fuga similique obcaecati perferendis! Lorem ipsum dolor sit amet, <span class="tooltip left" data-message="I'm also a Tooltip ;)">consectetur adipisicing</span> elit. Quod explicabo nisi similique corporis expedita voluptatibus dicta praesentium commodi quidem minima. Nostrum <span class="tooltip right" data-message="Hey, I'm Tooltip too!">repellat perferendis</span> ducimus at, quos facilis ipsa provident debitis.
+        Lorem ipsum dolor sit <span class="tooltip bottom" data-message="I'm Tooltip lol">amet consectetur</span> adipisicing elit. Fugit optio nihil reiciendis asperiores aut nesciunt? Qui adipisci voluptatibus atque consequatur laboriosam nam quis iusto <span class="tooltip top" data-message="I'm a Tooltip :)">earum perferendis</span>. Fuga similique obcaecati perferendis! Lorem ipsum dolor sit amet, <span class="tooltip right" data-message="I'm also a Tooltip ;)">consectetur adipisicing</span> elit. Quod explicabo nisi similique corporis expedita voluptatibus dicta praesentium commodi quidem minima. Nostrum <span class="tooltip left" data-message="Hey, I'm Tooltip too!">repellat perferendis</span> ducimus at, quos facilis ipsa provident debitis.
     </div>
 
     <div>
