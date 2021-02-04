@@ -24,17 +24,10 @@
 }
 
 .dropdown > .content {
-    display: none;
-    /* height: 0; */
-    /* overflow: hidden; */
-    /* transition: height 0.3s linear; */
+    overflow: hidden;
+    transition: height 0.3s linear;
 }
 
 .dropdown > .trigger.active::after {
     transform: rotate(-90deg);
-}
-
-.dropdown > .content.active {
-    display: block;
-    /* height: auto; */
 }
